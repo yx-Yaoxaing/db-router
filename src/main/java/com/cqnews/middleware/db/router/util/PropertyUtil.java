@@ -9,11 +9,7 @@ import org.springframework.core.env.PropertyResolver;
 
 /**
  * @description: 属性工具类
- * @author: 小傅哥，微信：fustack
- * @date: 2021/9/22
- * @github: https://github.com/fuzhengwei
- * @Copyright: 公众号：bugstack虫洞栈 | 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
- */
+ * */
 public class PropertyUtil {
 
     private static int springBootVersion = 1;
@@ -26,14 +22,7 @@ public class PropertyUtil {
         }
     }
 
-    /**
-     * Spring Boot 1.x is compatible with Spring Boot 2.x by Using Java Reflect.
-     * @param environment : the environment context
-     * @param prefix : the prefix part of property key
-     * @param targetClass : the target class type of result
-     * @param <T> : refer to @param targetClass
-     * @return T
-     */
+
     @SuppressWarnings("unchecked")
     public static <T> T handle(final Environment environment, final String prefix, final Class<T> targetClass) {
         switch (springBootVersion) {
